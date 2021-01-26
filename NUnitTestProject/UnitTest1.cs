@@ -33,10 +33,10 @@ namespace NUnitTestProject
         {
             RssFeedEngine rssFeedEngine = new RssFeedEngine(MockFeeds, false);
 
-            var  result =  rssFeedEngine.GetFeedData();
-
-           if(result.Count == 2) Assert.Pass();
-            Assert.Fail($"result.Count <> 2 ({result.Count})");
+            IList<RssFeedData>  result =  rssFeedEngine.GetFeedData();
+      
+           if(result.Count == 10) Assert.Pass();
+            Assert.Fail($"result.Count <> 10 ({result.Count})");
 
         }
     }

@@ -21,7 +21,7 @@ namespace MetabolonRssChallenge
         
             //Get List of feeds to verify
             FeedSource feedSource = new FeedSource(mock);
-            RssFeedEngine rssFeedEngine = new RssFeedEngine(feedSource.Data(),mock);
+            RssFeedEngine rssFeedEngine = new RssFeedEngine(feedSource.Data(),mock);   
             RssFunctions rssFunctions = new RssFunctions(rssFeedEngine.GetFeedData());
             Dictionary<string,string> results = rssFunctions.CompaniesNoActivityforDays(days);
    
